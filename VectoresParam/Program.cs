@@ -16,6 +16,7 @@ namespace VectoresParam
             imprimir(x);
             if (buscar2(x, 10) == true)
                 Console.WriteLine("\n15 encontrados");
+           if  (buscar (x, 5) == true)
 
             else
                 Console.WriteLine("\n15 no Existe");
@@ -36,15 +37,7 @@ namespace VectoresParam
              foreach (int num in x)
             {
                 Console.WriteLine("\nElemento {0}", num);
-                n = num;
-                Console.WriteLine("\nIngresa el numero que desea buscar");
-                b = Int32.Parse(Console.ReadLine());
-                if (b==num)
-                {
-                    Console.WriteLine("\nNumero registrado");
-
-                }
-                
+  
             }
         }
         public static bool buscar (int[]x, int y)
@@ -69,7 +62,7 @@ namespace VectoresParam
             int i = 0;
             while (i<MAX && encontrado == false )
             {
-                if (x =[i] == y)
+                if (x [i] == y)
                     encontrado = true;
                 i++;
             }
